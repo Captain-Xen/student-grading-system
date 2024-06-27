@@ -1,7 +1,5 @@
-// backend/controller/controller.js
-
 const bcrypt = require('bcryptjs');
-const db = require('../config/db'); // Adjust the path to your database connection
+const db = require('../config/db');
 
 // Function to register a new user
 exports.registerUser = async (req, res) => {
@@ -63,10 +61,10 @@ exports.createDefaultAdmin = async () => {
         return;
       }
   
-      // Create a default admin user
+      // Create a default admin user, change password if you want to
       const defaultAdmin = {
         username: 'admin',
-        password: 'admin123', // You might want to change this to a more secure default
+        password: 'admin123', 
         role: 'admin'
       };
   
