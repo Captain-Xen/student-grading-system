@@ -1,18 +1,25 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+const db = require('./config/db'); // Adjust the path to your database connection
 const routes = require('./routes/routes');
-require('dotenv').config();
+const { createDefaultAdmin } = require('./controllers/controller');
+
+dotenv.config();
 
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
+// Routes
 app.use('/api', routes);
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, async () => {
+  console.log(`Server is running on port ${PORT}`);
+  
+  // Create default admin if none exists
+  await createDefaultAdmin();
 });
