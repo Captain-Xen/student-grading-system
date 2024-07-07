@@ -6,6 +6,7 @@ import { Component, HostBinding } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'frontend';
   @HostBinding('class') activeThemeClass: string = '';
 
   toggleTheme(isDark: boolean) {
