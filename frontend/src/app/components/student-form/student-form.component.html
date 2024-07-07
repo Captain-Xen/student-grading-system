@@ -1,0 +1,24 @@
+<div class="student-form-container">
+    <mat-card>
+      <form (submit)="submitStudent()">
+        <mat-form-field>
+          <mat-label>Student ID</mat-label>
+          <input matInput [(ngModel)]="student.student_id" name="student_id" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput [(ngModel)]="student.name" name="name" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Class</mat-label>
+          <input matInput [(ngModel)]="student.class" name="class" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Age</mat-label>
+          <input matInput type="number" [(ngModel)]="student.age" name="age" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Next</button>
+      </form>
+    </mat-card>
+  </div>
+  

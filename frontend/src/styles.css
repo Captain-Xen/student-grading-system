@@ -1,0 +1,12 @@
+/* Define light theme variables */
+:root {
+    --primary-color: #3f51b5;
+    --accent-color: #e91e63;
+  }
+  
+  /* Define dark theme variables */
+  .dark-theme {
+    --primary-color: #607d8b;
+    --accent-color: #f44336;
+  }
+  

@@ -1,0 +1,20 @@
+<div class="summary-container">
+    <mat-card>
+      <h2>Summary</h2>
+      <div *ngIf="student">
+        <p><strong>Student ID:</strong> {{student.student_id}}</p>
+        <p><strong>Name:</strong> {{student.name}}</p>
+        <p><strong>Class:</strong> {{student.class}}</p>
+        <p><strong>Age:</strong> {{student.age}}</p>
+      </div>
+      <div *ngIf="grades">
+        <h3>Grades</h3>
+        <div *ngFor="let grade of grades">
+          <p><strong>{{grade.subject}}:</strong> Term 1: {{grade.term1}}, Term 2: {{grade.term2}}, Term 3: {{grade.term3}}</p>
+        </div>
+        <h3>Average: {{average}}</h3>
+        <h3>Letter Grade: {{letterGrade}}</h3>
+      </div>
+    </mat-card>
+  </div>
+  
