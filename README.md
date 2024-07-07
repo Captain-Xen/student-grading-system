@@ -13,6 +13,6 @@ Student Grade Management System (for administrators/staff)
 
 - 📚️ July 7, 2024
     - Complete REDO of this project, but instead of using Bootstrap, we're using Angular Material UI
-    # Backend dependency update: install jsonwebtoken
+    # Backend dependency update: install jsonwebtoken (nodemon and morgan for dev dependencies(npm i nodemon morgan -D) )
     - Student Controller and Routes
     - User Controller and Routes
