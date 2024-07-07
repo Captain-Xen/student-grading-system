@@ -1,12 +1,28 @@
-/* Define light theme variables */
-:root {
-    --primary-color: #3f51b5;
-    --accent-color: #e91e63;
+/* Light Theme */
+body.light-theme {
+    --primary-color: #ffffff;
+    --secondary-color: #f0f0f0;
+    --text-color: #000000;
   }
   
-  /* Define dark theme variables */
-  .dark-theme {
-    --primary-color: #607d8b;
-    --accent-color: #f44336;
+  /* Dark Theme */
+  body.dark-theme {
+    --primary-color: #333333;
+    --secondary-color: #444444;
+    --text-color: #ffffff;
   }
+  
+  /* Apply the theme colors */
+  body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  .container {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Additional styles for your components can use the theme variables as needed */
   

@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { StudentFormComponent } from './components/student-form/student-form.component';
 import { GradeFormComponent } from './components/grade-form/grade-form.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SummaryComponent } from './components/summary/summary.component';
     LoginComponent,
     StudentFormComponent,
     GradeFormComponent,
-    SummaryComponent
+    SummaryComponent,
+    ThemeToggleComponent
   ],
   imports: [
     BrowserModule,

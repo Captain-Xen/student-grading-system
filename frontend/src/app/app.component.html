@@ -1,4 +1,13 @@
-<div [class]="activeThemeClass">
-  <!-- Your app content -->
-  <router-outlet></router-outlet>
-</div>
+<header>
+  <nav>
+    <!-- Navigation items -->
+    <h1>Student Grading System</h1>
+  </nav>
+</header>
+
+<app-theme-toggle></app-theme-toggle>
+<router-outlet></router-outlet>
+
+<footer>
+  <p>&copy; 2024 Student Grading System</p>
+</footer>

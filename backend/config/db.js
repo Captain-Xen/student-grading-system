@@ -11,6 +11,16 @@ const pool = mysql.createPool({
 
 const jwtSecret = process.env.JWT_SECRET;
 
+// Test the database connection
+pool.getConnection((err, connection) => {
+  if (err) {
+    console.error('Error connecting to the database:', err.message);
+  } else {
+    console.log('Connected to the MySQL database');
+    connection.release();
+  }
+});
+
 module.exports = {
   pool: pool.promise(),
   jwtSecret: jwtSecret
